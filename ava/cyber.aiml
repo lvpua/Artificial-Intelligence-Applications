@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>CYBERSECURITY</pattern>
+    <template>
+        Cyber Security, lets protect some information1<br/>
+        <br/>
+        In today's world, innocent people rely on a professional like you
+        to protect their precious and sensitive data. As a cyber security
+        professional, you will be dealing with protecting sensitive and 
+        confidential data from hackers, a.k.a bad people!<br/>
+          <link>
+        <text>Click here to find out more</text>
+        <url>https://cybersecurityguide.org/careers/security-specialist/#:~:text=Cybersecurity%20specialists%20create%20and%20implement,specialist%20can%20be%20somewhat%20routine.</url>
+    </link>
+        <button><text>Help me find another career</text>
+            <postback>HelpMe</postback></button>
+        <button><text>Tell me  more about the other careers</text>
+            <postback>TellMe</postback></button>
+        <button><text>I'm actually not interested on this one</text>
+            <postback>IDontNeedYourHelp</postback></button>
+    </template>
+</category>
+</aiml>

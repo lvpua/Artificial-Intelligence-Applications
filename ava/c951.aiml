@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>HELLO</pattern>
+    <template>
+        <condition name="name">
+            <li value="unknown">Hello.</li>
+            <li>Hello <get name="name" />.</li>
+        </condition><br/><br/>
+        Hi, my name is Ava, the C951 bot, I am here to help you choose the 
+        best career path for you. Let's get started!
+        <br/>
+        <br/>
+       So tell me, what would you like to do?
+        <button><text>Help me find a career</text>
+            <postback>HelpMe</postback></button>
+        <button><text>Tell me more about the careers</text>
+            <postback>TellMe</postback></button>
+        <button><text>I am not interested</text>
+            <postback>IDontNeedYourHelp</postback></button>
+    </template>
+</category>
+<category>
+    <pattern>HI</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+<category>
+    <pattern>MY NAME IS *</pattern>
+    <template><think><set name="name"><star/></set></think>
+        <srai>HELLO</srai>
+    </template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <template>Sorry, I'm not sure I understand that.<br/>
+    <br/>
+    Say 'HI' or "HELLO" to start over.
+    </template>
+</category>
+<category>
+    <pattern>TELLME</pattern>
+    <template>
+         <button>
+            <text>UI/UX design</text>
+            <postback>uiuxdesign</postback>
+        </button>
+        <button>
+            <text>Database Administrator</text>
+            <postback>dbadmin</postback>
+        </button>
+        <button>
+            <text>Software Developer</text>
+            <postback>softwaredeveloper</postback>
+        </button>
+   
+            <button>
+                <text>Video Game Developer</text>
+                <postback>videogamedeveloper</postback>
+            </button>
+        <button>
+            <text>Cyber Security Professional</text>
+            <postback>cybersecurity</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>IDontNeedYourHelp</pattern>
+    <template>Good luck! 
+    <br/>
+    <br/>
+     Say 'HI' or "HELLO" to start over.
+    <br/>
+    <br/>
+     Type "clear" to remove previous
+    preferences.
+    </template>
+</category>
+</aiml>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>VIDEOGAMEDEVELOPER</pattern>
+    <template>
+        Video Game Developer, ah!, I see you love video games!<br/>
+        <br/>
+        Pow!  Bang!  Boom!  Games are everywhere.  On computers, phones, and
+        people pay hundreds of dollars for game systems just to run games on.
+        The gaming industry is booming and is ready for the next adventurer to
+        explore this career.  Don't miss out on the experience.<br/>
+        <br/>
+            
+     <link>
+        <text>Click here to find out more</text>
+        <url>https://www.careerexplorer.com/careers/back-end-developer/</url>
+    </link>
+        <button><text>Help me find another career</text>
+            <postback>HelpMe</postback></button>
+        <button><text>Tell me  more about the other careers</text>
+            <postback>TellMe</postback></button>
+        <button><text>I'm actually not interested on this one</text>
+            <postback>IDontNeedYourHelp</postback></button>
+    </template>
+</category>
+</aiml>

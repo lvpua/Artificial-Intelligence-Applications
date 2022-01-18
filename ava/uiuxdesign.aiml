@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>UIUXDESIGN</pattern>
+    <template>
+        UI/UX Design, Amazing Choice!<br/>
+        <br/>
+        So, making user-friendly interface is your thing.  Designing is powerful
+        tool to lear, from creating protoypes to testing your products to
+        actual users!
+        <br/>
+        <br/>
+      <link>
+        <text>Click here to find out more</text>
+        <url>https://www.springboard.com/library/ui-ux-design/job-description/#what-is-a-ux-designer-and-what-does-a-ux-designer-do</url>
+    </link>
+        <button><text>Help me find another career</text>
+            <postback>HelpMe</postback></button>
+        <button><text>Tell me  more about the other careers</text>
+            <postback>TellMe</postback></button>
+        <button><text>I'm actually not interested on this one</text>
+            <postback>IDontNeedYourHelp</postback></button>
+    </template>
+</category>
+</aiml>

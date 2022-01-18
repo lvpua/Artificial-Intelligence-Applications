@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>HELPME</pattern>
+    <template>
+    Please choose which one interest you the most: <br/>
+    <button>
+        <condition name="coding">
+            <li value="1"><text>Coding - I love it!</text></li>
+            <li value="2"><text>Coding - I am neutral about this</text></li>
+            <li value="3"><text>Coding - Not my favorite</text></li>
+            <li><text>Coding</text></li>
+        </condition>
+        <postback>Coding</postback></button>
+    <button>
+        <condition name="designing">
+            <li value="1"><text>Designing - I love it!</text></li>
+            <li value="2"><text>Designing - I am neutral about this</text></li>
+            <li value="3"><text>Designing-  Not my favorite</text></li>
+            <li><text>Designing</text></li>
+        </condition>
+        <postback>Designing</postback></button>
+    <button>
+        <condition name="security">
+            <li value="1"><text>Security -  I love it!</text></li>
+            <li value="2"><text>Security - I am neutral about this</text></li>
+            <li value="3"><text>Security -Not my favorite</text></li>
+            <li><text>Security</text></li>
+        </condition>
+        <postback>Security</postback></button>
+    <button>
+        <condition name="data">
+            <li value="1"><text>Data - I love it!</text></li>
+            <li value="2"><text>Data - I am neutral about this</text></li>
+            <li value="3"><text>Data - Not my favorite</text></li>
+            <li><text>Data</text></li>
+        </condition>
+        <postback>Data</postback></button>
+      <button><text>Show me what suits me the best!</text><postback>Button</postback></button>
+    </template>
+</category>
+
+<category>
+    <pattern>HEADER</pattern>
+    <template>
+        Since you are intersted on this, <br/>
+    </template>
+</category>
+
+<category>
+    <pattern>FOOTER</pattern>
+    <template>
+        <button><text>I love it!</text><postback>value 1</postback></button>
+        <button><text>I am neutral about this</text><postback>value 2</postback></button>
+        <button><text>Not my favorite</text><postback>value 3</postback></button>
+    </template>
+</category>
+
+<category>
+    <pattern>value *</pattern>
+    <template>
+        <think>
+            <condition name="category" value="coding">
+                <set name="coding"><star/></set>
+            </condition>
+            <condition name="category" value="designing">
+                <set name="designing"><star/></set>
+            </condition>
+            <condition name="category" value="security">
+                <set name="security"><star/></set>
+            </condition>
+            <condition name="category" value="data">
+                <set name="data"><star/></set>
+            </condition>
+      
+        </think>
+        I'll keep that in mind!  
+        <br/>
+        <br/>
+        <srai>helpme</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>CODING</pattern>
+    <template>
+        <srai>HEADER</srai>
+        Are you passionate about coding?
+        <srai>Footer</srai>
+        <think><set name="category">coding</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>DESIGNING</pattern>
+    <template>
+        <srai>HEADER</srai>
+        Do you like designing something?
+        <srai>Footer</srai>
+        <think><set name="category">designing</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>SECURITY</pattern>
+    <template>
+        <srai>HEADER</srai>
+        Do you like to protect and secure informations?
+        <srai>Footer</srai>
+        <think><set name="category">security</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>DATA</pattern>
+    <template>
+        <srai>HEADER</srai>
+        Are you passionate about data in general?
+        <srai>Footer</srai>
+        <think><set name="category">data</set></think>
+    </template>
+</category>
+
+
+
+<category>
+    <pattern>BUTTON</pattern>
+    <template>Based on your preference, these careers suits you most: <br/>
+    <srai>dbadminbutton</srai>
+    <srai>softwaredeveloperbutton</srai>
+    <srai>uiuxdesignbutton</srai>
+    <srai>videogamedeveloperbutton</srai>
+    <srai>cybersecuritybutton</srai>
+    <button>
+        <text>Update Preferences</text>
+        <postback>helpme</postback>
+    </button>
+    </template>
+</category>
+
+<category>
+    <pattern>UIUXDESIGNBUTTON</pattern>
+    <template>
+        <condition name="data">
+            <li value="1"></li>
+            <li>
+            <condition name="security">
+            <li value="1"></li>
+            <li>
+            <condition name="designing">
+                <li value="3"></li>
+                <li>
+                <button>
+                     <text>UI/UX Design</text>
+                <postback>uiuxdesign</postback>
+                </button>
+                </li>
+            </condition>
+               </li>
+            </condition>
+            </li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>DBADMINBUTTON</pattern>
+    <template>
+        <condition name="designing">
+            <li value="1"></li>
+            <li>
+            <condition name="data">
+                <li value="3"></li>
+                <li>
+                <button>
+                    <text>Database Admin</text>
+                    <postback>dbadmin</postback>
+                </button>
+                </li>
+            </condition>
+            </li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>SOFTWAREDEVELOPERBUTTON</pattern>
+    <template>
+         <condition name="data">
+            <li value="1"></li>
+            <li>
+            <condition name="security">
+            <li value="1"></li>
+            <li>
+            <condition name="designing">
+                <li value="3"></li>
+                <li>
+            <button>
+                <text>Software Developer</text>
+                <postback>softwaredeveloper</postback>
+            </button>
+                 </li>
+            </condition>
+              </li>
+            </condition>
+            </li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>VIDEOGAMEDEVELOPERBUTTON</pattern>
+    <template>
+         <condition name="data">
+            <li value="1"></li>
+            <li>
+            <condition name="security">
+            <li value="1"></li>
+            <li>
+            <condition name="designing">
+                <li value="3"></li>
+                <li>
+            <button>
+                <text>Video Game Developer</text>
+                <postback>videogamedeveloper</postback>
+            </button>
+                 </li>
+            </condition>
+              </li>
+            </condition>
+            </li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>CYBERSECURITYBUTTON</pattern>
+    <template>
+        <condition name="designing">
+            <li value="1"></li>
+            <li>
+            <condition name="security">
+            <li value="3"></li>
+            <li>
+            <button>
+                <text>Cyber Security</text>
+                <postback>cybersecurity</postback>
+            </button>
+             </li>
+            </condition>
+            </li>
+        </condition>
+    </template>
+</category>
+
+</aiml>

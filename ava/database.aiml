@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>DBADMIN</pattern>
+    <template>
+        Database Administrator, more datas we go!<br/>
+        <br/>
+        This is an exciting field and an evolving field. Organizations
+        need a professional like you to manage and protect their
+        large amount of datas.<br/>
+        <br/>
+       <br/>
+       <link>
+        <text>Click here to find out more</text>
+        <url>https://www.careerexplorer.com/careers/database-administrator/</url>
+    </link>
+        <button><text>Help me find another career</text>
+            <postback>HelpMe</postback></button>
+        <button><text>Tell me  more about the other careers</text>
+            <postback>TellMe</postback></button>
+        <button><text>I'm actually not interested on this one</text>
+            <postback>IDontNeedYourHelp</postback></button>
+    </template>
+</category>
+</aiml>
